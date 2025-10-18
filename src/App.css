@@ -1,6 +1,55 @@
 .App {
   text-align: center;
 }
+.sidebar {
+  width: 220px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #ddd;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #007bff;
+}
+
+.sidebar a.active {
+  color: #007bff;
+  font-weight: 600;
+}
+.layout {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  flex: 1;
+  padding: 25px;
+  background-color: #fff;
+}
 
 .App-logo {
   height: 40vmin;
