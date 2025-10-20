@@ -19,6 +19,9 @@ export default function Sidebar() {
         <li>
           <NavLink to="/notes/:postId">Posts</NavLink>
         </li>
+        <li>
+          <NavLink to="/allUsers">All Users</NavLink>
+        </li>
       </ul>
     </aside>
   );

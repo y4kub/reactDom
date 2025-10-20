@@ -1,16 +1,17 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useFetch } from "../hooks/useFetch";
 const NoteList = () => {
-  const [posts, setPosts] = useState([]);
-  useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts?_limit=5`)
-      .then((res) => res.json())
-      .then((data) => setPosts(data));
-  }, []);
+  const {
+    data: posts,
+    isLoading,
+    errorMessage,
+  } = useFetch(`https://jsonplaceholder.typicode.com/posts?_limit=5}`, []);
 
   return (
     <div>
       <h2>All Posts</h2>
+      {isLoading && <h3>Loading Data....</h3>}
+      {errorMessage && <h3>{errorMessage}</h3>}
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
