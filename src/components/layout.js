@@ -1,7 +1,6 @@
 import Sidebar from "./sidebar";
 import { Outlet } from "react-router-dom";
-import "./Layout.css"; // optional if you want to separate layout styling
-
+import "../App.css";
 export default function Layout() {
   return (
     <div className="layout">

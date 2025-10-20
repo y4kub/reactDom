@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
-
+import "../App.css";
 export default function Sidebar() {
   return (
     <aside className="sidebar">
       <h3>Menu</h3>
+
       <ul>
         <li>
           <NavLink to="/" end>
@@ -14,10 +15,10 @@ export default function Sidebar() {
           <NavLink to="/about">About</NavLink>
         </li>
         <li>
-          <NavLink to="/list">List</NavLink>
+          <NavLink to="/noteList">List</NavLink>
         </li>
         <li>
-          <NavLink to="/posts">Posts</NavLink>
+          <NavLink to="/notes/:postId">Posts</NavLink>
         </li>
       </ul>
     </aside>

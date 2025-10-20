@@ -1,5 +1,7 @@
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import { useState, useEffect } from "react";
+import AppRoutes from "./router/router";
 function App() {
   useEffect(() => {
     getAllNotes();
@@ -93,31 +95,34 @@ function App() {
     });
   };
   return (
-    <div className="App">
-      <form onSubmit={submitHandler}>
-        <input type="text" value={title} onChange={changleTitleHandler} />
-        <button type="submit">{editMode ? "Update Note" : "Add Note"}</button>
-      </form>
-      <div className="noteList">
-        <h2>To-do List</h2>
-        <ul>
-          {notes.map((note) => {
-            return (
-              <li key={note.id}>
-                <span>
-                  {note.id}
-                  {note.title}
-                </span>
-                <button onClick={() => editHandler(note)}>Edit</button>
-                <button onClick={() => removeNotesHandler(note.id)}>
-                  Delete
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </div>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+    // <div className="App">
+    //   <form onSubmit={submitHandler}>
+    //     <input type="text" value={title} onChange={changleTitleHandler} />
+    //     <button type="submit">{editMode ? "Update Note" : "Add Note"}</button>
+    //   </form>
+    //   <div className="noteList">
+    //     <h2>To-do List</h2>
+    //     <ul>
+    //       {notes.map((note) => {
+    //         return (
+    //           <li key={note.id}>
+    //             <span>
+    //               {note.id}
+    //               {note.title}
+    //             </span>
+    //             <button onClick={() => editHandler(note)}>Edit</button>
+    //             <button onClick={() => removeNotesHandler(note.id)}>
+    //               Delete
+    //             </button>
+    //           </li>
+    //         );
+    //       })}
+    //     </ul>
+    //   </div>
+    // </div>
   );
 }
 
