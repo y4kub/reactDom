@@ -19,16 +19,3 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
-// export default function AppRoutes() {
-//   path:"/",
-//   return (
-//     <Routes>
-//       <Route path="/" element={<Layout />}>
-//         <Route index element={<Home />} />
-//         <Route path="about" element={<About />} />
-//         <Route path="list" element={<NoteList />} />
-//         <Route path="posts" element={<NoteDetails />} />
-//       </Route>
-//     </Routes>
-//   );
-// }

@@ -4,7 +4,6 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <h3>Menu</h3>
-
       <ul>
         <li>
           <NavLink to="/" end>
